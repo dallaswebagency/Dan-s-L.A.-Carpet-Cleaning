@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dan's L.A. Carpet Cleaning | Lethbridge, Alberta</title>
+<meta name="description" content="Dan's L.A. Carpet Cleaning has served Lethbridge, Alberta since 1989. Family run carpet, upholstery and mattress cleaning, plus janitorial and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE6; --sand:#E8DFCC; --ink:#10262B; --ink-2:#37494D;
+  --teal:#0F7F7A; --teal-deep:#0A4F4D; --orange:#F0672A; --white:#FFFDF8;
+  --display:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  --body:'Figtree','Segoe UI',Arial,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 15px/1 var(--body);letter-spacing:.02em;padding:17px 26px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s,color .2s;border:2px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:#d9551a}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:18px;height:18px}
+.kicker{font:700 13px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+
+/* sale ribbon */
+.sale{background:var(--ink);color:var(--paper);font-size:14px;text-align:center;padding:10px var(--pad);letter-spacing:.02em}
+.sale b{color:#FFB08A}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(16,38,43,.12)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:46px;height:46px;flex:none}
+.brand-txt{font:800 20px/1 var(--display);letter-spacing:-.01em}
+.brand-txt small{display:block;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-top:5px}
+nav.main{display:flex;gap:22px;align-items:center}
+nav.main a{text-decoration:none;font-weight:600;font-size:15px;position:relative;padding:6px 0;white-space:nowrap}
+nav.main a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav.main a:hover::after{transform:scaleX(1)}
+.top-cta{display:flex;gap:10px;align-items:center}
+.top-cta .btn{padding:13px 20px;font-size:14px;white-space:nowrap}
+.menu-btn{display:none;background:none;border:2px solid var(--ink);border-radius:10px;padding:9px 12px;font:700 13px var(--body);cursor:pointer}
+
+/* hero */
+.hero{position:relative;padding:clamp(40px,6vw,84px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,5vw,80px);align-items:center}
+.hero h1{font:800 clamp(44px,6.6vw,94px)/.96 var(--display);letter-spacing:-.035em;margin:22px 0 26px}
+.hero h1 em{font-style:normal;color:var(--teal);white-space:nowrap;background:linear-gradient(transparent 66%,rgba(240,103,42,.38) 66% 94%,transparent 94%);padding:0 .06em;margin:0 -.06em}
+.hero p.lead{font-size:clamp(18px,1.6vw,21px);max-width:42ch;color:var(--ink-2)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 30px}
+.promise{display:flex;flex-wrap:wrap;gap:10px 26px;font-weight:600;font-size:15px}
+.promise span{display:flex;align-items:center;gap:8px}
+.promise i{width:9px;height:9px;border-radius:50%;background:var(--teal);display:block}
+.collage{position:relative;height:clamp(440px,48vw,620px)}
+.ph{position:absolute;overflow:hidden;background:var(--sand);box-shadow:0 24px 50px -22px rgba(16,38,43,.55)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.a{left:0;top:0;width:56%;height:66%;clip-path:polygon(0 0,calc(100% - 44px) 0,100% 44px,100% 100%,0 100%)}
+.ph.b img{object-position:50% 85%}
+.ph.b{right:0;top:14%;width:40%;height:56%;clip-path:polygon(0 0,100% 0,100% 100%,40px 100%,0 calc(100% - 40px))}
+.ph.c{left:18%;bottom:0;width:62%;height:34%;clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%)}
+.stamp{position:absolute;right:-6px;bottom:6%;width:min(178px,30vw);aspect-ratio:1;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;transform:rotate(-10deg);box-shadow:0 12px 30px -10px rgba(240,103,42,.7);z-index:3}
+.stamp svg{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);animation:spin 28s linear infinite}
+.stamp strong{font:800 clamp(30px,4vw,46px)/1 var(--display);letter-spacing:-.03em;text-align:center}
+.stamp strong small{display:block;font:700 10px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;margin-top:3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* L.A. meaning band */
+.meaning{background:var(--teal-deep);color:var(--paper);padding:clamp(48px,7vw,96px) 0;position:relative;overflow:hidden}
+.meaning .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,80px);align-items:center}
+.meaning .big{font:800 clamp(110px,20vw,280px)/.8 var(--display);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2px #8FD8D0}
+.meaning .big span{color:var(--orange);-webkit-text-stroke:0}
+.meaning h2{font:700 clamp(26px,3.4vw,44px)/1.12 var(--display);letter-spacing:-.02em;max-width:22ch}
+.meaning p{margin-top:16px;max-width:52ch;color:#CDE6E1}
+
+/* services ledger */
+.ledger{padding:clamp(60px,8vw,120px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,54px)}
+.sec-head h2{font:800 clamp(34px,5vw,66px)/1 var(--display);letter-spacing:-.03em;margin-top:14px;max-width:14ch}
+.sec-head p{max-width:36ch;color:var(--ink-2)}
+.ledger-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,80px);align-items:start}
+.rows{list-style:none;border-top:2px solid var(--ink)}
+.rows li{border-bottom:1px solid rgba(16,38,43,.25)}
+.rows a{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:10px;padding:19px 6px;text-decoration:none;transition:padding .25s,background .25s,color .25s}
+.rows .n{font:700 13px var(--body);color:var(--teal);letter-spacing:.1em}
+.rows .t{font:700 clamp(20px,2.3vw,30px)/1.15 var(--display);letter-spacing:-.015em}
+.rows .ar{width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;opacity:.35;transition:.25s}
+.rows .ar svg{width:14px;height:14px}
+.rows li.on a,.rows a:hover{padding-left:18px;background:var(--sand)}
+.rows li.on .ar,.rows a:hover .ar{opacity:1;background:var(--orange);border-color:var(--orange);color:#fff}
+.preview{position:sticky;top:110px}
+.preview-frame{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--sand);clip-path:polygon(0 0,calc(100% - 56px) 0,100% 56px,100% 100%,56px 100%,0 calc(100% - 56px));box-shadow:0 30px 60px -28px rgba(16,38,43,.6)}
+.preview-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .45s,transform .8s}
+.preview-frame img.on{opacity:1;transform:scale(1)}
+.preview-note{margin-top:18px;padding:16px 18px;background:var(--ink);color:var(--paper);font-size:15px;border-left:6px solid var(--orange)}
+.preview-note b{color:#FFB08A}
+
+/* packages: estimate slip */
+.packs{background:var(--sand);padding:clamp(60px,8vw,120px) 0;position:relative}
+.packs::before,.packs::after{content:"";position:absolute;left:0;right:0;height:18px;background:radial-gradient(circle at 12px 0,var(--paper) 9px,transparent 10px) 0 0/24px 18px repeat-x}
+.packs::before{top:0}
+.packs::after{bottom:0;transform:scaleY(-1)}
+.pack-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;align-items:stretch;margin-top:10px}
+.tabs{display:flex;flex-direction:column;gap:12px;padding-right:clamp(0px,3vw,40px)}
+.tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:22px 24px;background:var(--paper);border:2px solid var(--ink);border-radius:18px;transition:transform .2s,background .2s,color .2s}
+.tab:hover{transform:translateX(6px)}
+.tab .nm{font:800 clamp(24px,2.8vw,36px)/1 var(--display);letter-spacing:-.02em}
+.tab .pr{font:700 17px var(--body)}
+.tab .pr s{opacity:.55;font-weight:500;margin-left:8px;font-size:14px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);transform:translateX(14px)}
+.tab:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.slip{position:relative;background:var(--white);padding:clamp(28px,4vw,52px);border-radius:6px;box-shadow:0 30px 60px -30px rgba(16,38,43,.5);display:flex;flex-direction:column;gap:20px}
+.slip::before{content:"";position:absolute;left:-9px;top:20px;bottom:20px;width:18px;background:radial-gradient(circle at 0 10px,var(--sand) 8px,transparent 9px) 0 0/18px 28px repeat-y}
+.slip-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.slip-top .tag{font:700 12px var(--body);letter-spacing:.16em;text-transform:uppercase;background:var(--orange);color:#fff;padding:8px 12px;border-radius:6px}
+.slip-top .gst{font-size:14px;color:var(--ink-2)}
+.slip h3{font:800 clamp(30px,4vw,52px)/1 var(--display);letter-spacing:-.03em}
+.price{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;border-top:2px dashed rgba(16,38,43,.3);border-bottom:2px dashed rgba(16,38,43,.3);padding:18px 0}
+.price .now{font:800 clamp(52px,7vw,96px)/.9 var(--display);letter-spacing:-.04em;color:var(--teal-deep)}
+.price .was{font-size:18px;color:var(--ink-2)}
+.price .was s{font-weight:700}
+.slip ul{list-style:none;display:grid;gap:10px}
+.slip li{display:flex;gap:12px;align-items:flex-start}
+.slip li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.slip .fine{font-size:14px;color:var(--ink-2)}
+.slip .btn{align-self:flex-start}
+.pack-foot{margin-top:28px;font-size:15px;color:var(--ink-2);max-width:70ch}
+
+/* service area */
+.area{background:var(--ink);color:var(--paper);padding:clamp(60px,8vw,120px) 0}
+.area .kicker{color:#7FD3CB}
+.area h2{font:800 clamp(34px,5vw,66px)/1 var(--display);letter-spacing:-.03em;margin:14px 0 34px;max-width:16ch}
+.towns{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline}
+.towns .hub{font:800 clamp(44px,8vw,120px)/1 var(--display);letter-spacing:-.04em;color:var(--orange)}
+.towns .near{font:700 clamp(34px,6vw,86px)/1.04 var(--display);letter-spacing:-.035em;color:var(--paper)}
+.towns .far{font:600 clamp(26px,4.2vw,58px)/1.1 var(--display);letter-spacing:-.025em;color:transparent;-webkit-text-stroke:1.5px #8FB3B0}
+.towns .sep{color:#8FB3B0;font-size:clamp(20px,3vw,40px)}
+.area-notes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px;max-width:860px}
+.area-notes div{padding:18px 20px;border:1px solid rgba(244,239,230,.25);border-radius:14px;font-size:15px}
+.area-notes b{display:block;font:700 12px var(--body);letter-spacing:.16em;text-transform:uppercase;color:#7FD3CB;margin-bottom:6px}
+
+/* about */
+.about{padding:clamp(60px,8vw,120px) 0 0}
+.about-band{position:relative;margin-top:clamp(30px,4vw,56px)}
+.about-band img{width:100%;height:clamp(260px,38vw,460px);object-fit:cover}
+.about-card{position:relative;margin:-90px auto 0;max-width:980px;background:var(--white);padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px);box-shadow:0 30px 60px -30px rgba(16,38,43,.5);border-top:8px solid var(--orange)}
+.about-card h3{font:800 clamp(26px,3.2vw,40px)/1.05 var(--display);letter-spacing:-.025em}
+.about-card ul{list-style:none;display:grid;gap:12px}
+.about-card li{padding-bottom:12px;border-bottom:1px solid rgba(16,38,43,.18);font-weight:600}
+.about-card li:last-child{border:0}
+.about-intro{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.about-intro h2{font:800 clamp(34px,5vw,66px)/1 var(--display);letter-spacing:-.03em;max-width:15ch;margin-top:14px}
+
+/* contact */
+.reach{padding:clamp(70px,9vw,140px) 0;text-align:left}
+.reach .wrap{display:grid;grid-template-columns:1.5fr .5fr;gap:clamp(30px,5vw,80px);align-items:end}
+.reach .phone{display:block;white-space:nowrap;font:800 clamp(40px,7vw,104px)/.95 var(--display);letter-spacing:-.045em;text-decoration:none;color:var(--ink);margin:14px 0 8px}
+.reach .phone:hover{color:var(--teal)}
+.reach .sub{font-size:19px;color:var(--ink-2)}
+.reach-side{display:grid;gap:14px}
+.reach-side .btn{justify-content:center;white-space:nowrap}
+.mail{font-weight:700;font-size:18px;text-align:center;padding:10px}
+
+/* footer */
+footer{background:var(--teal-deep);color:var(--paper);padding:clamp(48px,6vw,84px) 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:clamp(24px,4vw,56px)}
+footer .brand-txt{color:var(--paper)}
+footer .brand-txt small{color:#8FD8D0}
+footer p{color:#CDE6E1;font-size:15px;margin-top:16px;max-width:30ch}
+footer h4{font:700 12px var(--body);letter-spacing:.18em;text-transform:uppercase;color:#8FD8D0;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:9px;font-size:15px}
+footer a{text-decoration:none}
+footer a:hover{color:#FFB08A}
+.foot-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(244,239,230,.22);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#CDE6E1}
+.foot-bottom a{color:#fff;font-weight:700;border-bottom:2px solid var(--orange)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.stamp svg{animation:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:1180px){.top-cta .btn-line{display:none}nav.main{gap:18px}}
+@media (max-width:1020px){
+  nav.main{display:none;position:absolute;top:78px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:flex-start;padding:20px var(--pad) 28px;border-bottom:1px solid rgba(16,38,43,.15);gap:16px}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+  .top-cta .btn-line{display:none}
+  .hero .wrap,.ledger-grid,.pack-shell,.reach .wrap{grid-template-columns:1fr}
+  .preview{display:none}
+  .tabs{padding-right:0;margin-bottom:26px}
+  .tab[aria-selected="true"]{transform:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .meaning .wrap{grid-template-columns:1fr}
+  .collage{max-width:560px;margin:0 auto;width:100%}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .top .wrap{height:68px}
+  nav.main{top:68px}
+  .top-cta .btn-orange{display:none}
+  .about-card,.area-notes{grid-template-columns:1fr}
+  .about-card{margin-top:-50px}
+  .foot-grid{grid-template-columns:1fr}
+  .rows a{grid-template-columns:40px 1fr auto}
+  .tab{flex-direction:column;gap:6px}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .stamp{right:0}
+}
+</style>
+</head>
+<body>
+
+<div class="sale">End of Summer Sale on every package, until <b>October 31, 2026</b></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Dan's L.A. Carpet Cleaning home">
+      <!-- temporary mark, swap for the final logo file -->
+      <svg class="brand-mark" viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="12" fill="#0F7F7A"/><path d="M8 33h9v-6h9v-6h9v-6" fill="none" stroke="#F0672A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="8" y="17" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#FFFDF8">L.A.</text></svg>
+      <span class="brand-txt">Dan's L.A.<small>Carpet Cleaning</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="https://www.danslacarpetcleaning.com/about.html">About</a>
+      <a href="https://www.danslacarpetcleaning.com/contact.html">Contact</a>
+      <a href="https://www.danslacarpetcleaning.com/business_services.html">Janitorial</a>
+      <a href="https://www.danslacarpetcleaning.com/painting_service.html">Painting Service</a>
+      <a href="https://www.danslacarpetcleaning.com/sample_photos.html">Sample Photos</a>
+    </nav>
+    <div class="top-cta">
+      <a class="btn btn-line" href="tel:+14033302268">403-330-2268</a>
+      <a class="btn btn-orange" href="https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=h4zry2980cudc0y1">Book Now Online</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Lethbridge, Alberta</span>
+      <h1>The <em>#1 carpet cleaner</em> in Lethbridge.</h1>
+      <p class="lead">Family run for over 36 years. Quality comes first!</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=h4zry2980cudc0y1">Book Now Online
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        <a class="btn btn-line" href="tel:+14033302268">Call or text 403-330-2268</a>
+      </div>
+      <div class="promise">
+        <span><i></i>Safe, environment friendly cleaning, always</span>
+        <span><i></i>No extra disposal fee ever</span>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="false">
+      <div class="ph a"><img src="images/steam-stairs.jpg" alt="Steam cleaning carpeted stairs in Lethbridge"></div>
+      <div class="ph b"><img src="images/sofa-cleaning.jpg" alt="Furniture cleaning in Lethbridge"></div>
+      <div class="ph c"><img src="images/stairs-carpet.jpg" alt="Freshly cleaned carpeted staircase"></div>
+      <div class="stamp">
+        <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs><text font-family="Figtree,Arial" font-weight="700" font-size="15.5" letter-spacing="3.6" fill="#fff"><textPath href="#circ">LETHBRIDGE ALBERTA CARPET CLEANING · FAMILY RUN · </textPath></text></svg>
+        <strong>1989<small>Established</small></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT L.A. MEANS -->
+<section class="meaning">
+  <div class="wrap">
+    <div class="big rv" aria-hidden="true">L<span>.</span>A<span>.</span></div>
+    <div class="rv">
+      <h2>L.A. has always stood for Lethbridge Alberta Carpet Cleaning.</h2>
+      <p>Residential and commercial, in Lethbridge and the towns around it, with the same family looking after every job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES LEDGER -->
+<section class="ledger" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">What we do</span>
+        <h2>Everything from the carpet to the curb.</h2>
+      </div>
+      <p>Pick a line to see it. Janitorial and painting have their own pages.</p>
+    </div>
+    <div class="ledger-grid">
+      <ol class="rows" id="rows">
+        <li class="on"><a href="#packages" data-img="images/stairs-carpet.jpg" data-alt="Carpet and rug cleaning"><span class="n">01</span><span class="t">Carpet and rug cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/steam-stairs.jpg" data-alt="Steam cleaning"><span class="n">02</span><span class="t">Steam cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/sofa-cleaning.jpg" data-alt="Furniture and sofa cleaning"><span class="n">03</span><span class="t">Furniture and sofa cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/steam-room.jpg" data-alt="Mattress steam cleaning"><span class="n">04</span><span class="t">Mattress steam cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/steam-room.jpg" data-alt="Pet odour removal"><span class="n">05</span><span class="t">Pet odour removal</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/sofa-cleaning.jpg" data-alt="Auto interior detailing"><span class="n">06</span><span class="t">Auto interior detailing</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="https://www.danslacarpetcleaning.com/business_services.html" data-img="images/steam-room.jpg" data-alt="Office and commercial janitorial"><span class="n">07</span><span class="t">Office and commercial janitorial</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Exterior concrete sealants"><span class="n">08</span><span class="t">Exterior concrete sealants</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Minor building repairs"><span class="n">09</span><span class="t">Minor building repairs</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="https://www.danslacarpetcleaning.com/painting_service.html" data-img="images/furnished-room.jpg" data-alt="Interior painting"><span class="n">10</span><span class="t">Interior painting</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Lawn care"><span class="n">11</span><span class="t">Lawn care</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+      </ol>
+      <aside class="preview">
+        <div class="preview-frame" id="pframe">
+          <img class="on" src="images/stairs-carpet.jpg" alt="">
+          <img src="images/steam-stairs.jpg" alt="">
+          <img src="images/sofa-cleaning.jpg" alt="">
+          <img src="images/steam-room.jpg" alt="">
+          <img src="images/furnished-room.jpg" alt="">
+        </div>
+        <p class="preview-note"><b>Protected after cleaning.</b> We apply Maxim Advanced carpet and furniture protectant. Stain guard and pet urine treatments are available for an extra charge.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packs" id="packages">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">Packages</span>
+        <h2>Pick your package.</h2>
+      </div>
+      <p>End of Summer Sale prices, running until October 31, 2026. All packages include deodorizer.</p>
+    </div>
+    <div class="pack-shell rv">
+      <div class="tabs" role="tablist" aria-label="Packages">
+        <button class="tab" role="tab" aria-selected="true" data-k="queen"><span class="nm">Queen</span><span class="pr">$175.00<s>$304.95</s></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-k="sofa"><span class="nm">Sofa</span><span class="pr">$179.99<s>$299.99</s></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-k="king"><span class="nm">King</span><span class="pr">$279.00<s>$498.00</s></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-k="royal"><span class="nm">Royal</span><span class="pr">$325.00<s>$604.00</s></span></button>
+      </div>
+      <article class="slip" id="slip" aria-live="polite">
+        <div class="slip-top"><span class="tag">End of Summer Sale</span><span class="gst">Plus GST</span></div>
+        <h3 id="sName">Queen Package</h3>
+        <div class="price"><span class="now" id="sNow">$175.00</span><span class="was">Regularly <s id="sWas">$304.95</s></span></div>
+        <ul id="sList"></ul>
+        <p class="fine" id="sFine"></p>
+        <a class="btn btn-orange" id="sBook" href="https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=h4zry2980cudc0y1">Book Now Online</a>
+      </article>
+    </div>
+    <p class="pack-foot">Extra charges may apply for oversized homes, heavy soiling or pet urine treatments.</p>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Where we work</span>
+      <h2>Lethbridge and the towns around it.</h2>
+    </div>
+    <div class="towns rv">
+      <span class="hub">Lethbridge</span><span class="sep">/</span>
+      <span class="near">Coaldale</span><span class="sep">/</span>
+      <span class="near">Coalhurst</span>
+    </div>
+    <div class="towns rv" style="margin-top:14px">
+      <span class="far">Fort Macleod</span><span class="sep">/</span>
+      <span class="far">Magrath</span><span class="sep">/</span>
+      <span class="far">Raymond</span><span class="sep">/</span>
+      <span class="far">Cardston</span><span class="sep">/</span>
+      <span class="far">Picture Butte</span><span class="sep">/</span>
+      <span class="far">Nobleford</span>
+    </div>
+    <div class="area-notes rv">
+      <div><b>Lethbridge, Coaldale, Coalhurst</b>Our home turf.</div>
+      <div><b>Everywhere else</b>A small mileage or travel charge may apply.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-intro rv">
+      <div>
+        <span class="kicker">Since 1989</span>
+        <h2>Family run for over 36 years.</h2>
+      </div>
+      <a class="btn btn-line" href="https://www.danslacarpetcleaning.com/about.html">More about us</a>
+    </div>
+  </div>
+  <div class="about-band rv">
+    <img src="images/furnished-room.jpg" alt="Bright living room with a freshly cleaned sofa">
+  </div>
+  <div class="wrap">
+    <div class="about-card rv">
+      <h3>Quality comes first!</h3>
+      <ul>
+        <li>Residential and commercial</li>
+        <li>Safe, environment friendly cleaning, always</li>
+        <li>No extra disposal fee ever</li>
+        <li>Protectant applied to carpets and furniture</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="reach" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Call or text</span>
+      <a class="phone" href="tel:+14033302268">403-330-2268</a>
+      <p class="sub">Dan's L.A. Carpet Cleaning, Lethbridge, Alberta.</p>
+    </div>
+    <div class="reach-side rv">
+      <a class="btn btn-orange" href="https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=h4zry2980cudc0y1">Book Now Online</a>
+      <a class="btn btn-line" href="https://www.danslacarpetcleaning.com/contact.html">Contact page</a>
+      <a class="mail" href="mailto:danfoxsden@msn.com">danfoxsden@msn.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="12" fill="#F4EFE6"/><path d="M8 33h9v-6h9v-6h9v-6" fill="none" stroke="#F0672A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="8" y="17" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#0A4F4D">L.A.</text></svg>
+          <span class="brand-txt">Dan's L.A.<small>Carpet Cleaning</small></span>
+        </a>
+        <p>Family run carpet cleaning in Lethbridge, Alberta since 1989.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="https://www.danslacarpetcleaning.com/about.html">About</a></li>
+          <li><a href="https://www.danslacarpetcleaning.com/contact.html">Contact</a></li>
+          <li><a href="https://www.danslacarpetcleaning.com/business_services.html">Janitorial</a></li>
+          <li><a href="https://www.danslacarpetcleaning.com/painting_service.html">Painting Service</a></li>
+          <li><a href="https://www.danslacarpetcleaning.com/sample_photos.html">Sample Photos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <ul>
+          <li>Lethbridge</li><li>Coaldale</li><li>Coalhurst</li><li>Fort Macleod</li><li>Magrath</li><li>Raymond</li><li>Cardston</li><li>Picture Butte</li><li>Nobleford</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+14033302268">403-330-2268</a> (call or text)</li>
+          <li><a href="mailto:danfoxsden@msn.com">danfoxsden@msn.com</a></li>
+          <li><a href="https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=h4zry2980cudc0y1">Book Now Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dan's L.A. Carpet Cleaning. All rights reserved.</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // mobile menu
+  var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+  // services ledger preview
+  var rows=document.querySelectorAll('#rows li'),imgs=document.querySelectorAll('#pframe img');
+  function show(li){
+    var src=li.querySelector('a').getAttribute('data-img');
+    rows.forEach(function(r){r.classList.toggle('on',r===li)});
+    imgs.forEach(function(i){i.classList.toggle('on',i.getAttribute('src')===src)});
+  }
+  rows.forEach(function(li){
+    li.addEventListener('mouseenter',function(){show(li)});
+    li.querySelector('a').addEventListener('focus',function(){show(li)});
+  });
+
+  // packages
+  var B1='https://go.thryv.com/site/DansLACarpetCleaning/online-scheduling?service=';
+  var P={
+    queen:{n:'Queen Package',now:'$175.00',was:'$304.95',b:B1+'h4zry2980cudc0y1',
+      l:['Living room carpet','One bedroom carpet','Hall carpet','Deodorizer included'],f:'One bedroom can be swapped for 10 stairs.'},
+    sofa:{n:'Sofa Package',now:'$179.99',was:'$299.99',b:B1+'cki6sqy476cjvd8m',
+      l:['Regular sofa','Armchair','Deodorizer included'],f:'Sectional sofa alone: $249.99 (regularly $359.00).'},
+    king:{n:'King Package',now:'$279.00',was:'$498.00',b:B1+'h4zry2980cudc0y1',
+      l:['Living room carpet','Hall carpet','Three bedrooms','Up to 12 stairs','Deodorizer included'],f:''},
+    royal:{n:'Royal Package',now:'$325.00',was:'$604.00',b:B1+'h4zry2980cudc0y1',
+      l:['Living room carpet','Family room carpet','Three bedrooms','One hall','Up to 12 stairs','Deodorizer included'],f:''}
+  };
+  var tabs=document.querySelectorAll('.tab');
+  function set(k){
+    var p=P[k];
+    document.getElementById('sName').textContent=p.n;
+    document.getElementById('sNow').textContent=p.now;
+    document.getElementById('sWas').textContent=p.was;
+    document.getElementById('sFine').textContent=p.f;
+    document.getElementById('sBook').href=p.b;
+    document.getElementById('sList').innerHTML=p.l.map(function(x){return '<li>'+x+'</li>'}).join('');
+    tabs.forEach(function(t){t.setAttribute('aria-selected',t.getAttribute('data-k')===k)});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){set(t.getAttribute('data-k'))})});
+  set('queen');
+
+  // reveal on scroll
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
