@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/logo-badge.png">
 <title>Dan's L.A. Carpet Cleaning | Lethbridge, Alberta</title>
 <meta name="description" content="Dan's L.A. Carpet Cleaning has served Lethbridge, Alberta since 1989. Family run carpet, upholstery and mattress cleaning, plus janitorial and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +40,10 @@ a{color:inherit}
 header.top{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(16,38,43,.12)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-mark{width:46px;height:46px;flex:none}
+.brand{margin-right:18px}
+.brand img{height:60px;width:auto;display:block}
+.brand.plate{background:var(--paper);padding:12px 18px;border-radius:14px;display:inline-flex}
+.brand.plate img{height:56px}
 .brand-txt{font:800 20px/1 var(--display);letter-spacing:-.01em}
 .brand-txt small{display:block;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-top:5px}
 nav.main{display:flex;gap:22px;align-items:center}
@@ -65,7 +69,7 @@ nav.main a:hover::after{transform:scaleX(1)}
 .ph img{width:100%;height:100%;object-fit:cover}
 .ph.a{left:0;top:0;width:56%;height:66%;clip-path:polygon(0 0,calc(100% - 44px) 0,100% 44px,100% 100%,0 100%)}
 .ph.b img{object-position:50% 55%}
-.ph.c img{object-position:50% 30%}
+.ph.c img{object-position:50% 50%}
 .ph.b{right:0;top:14%;width:40%;height:56%;clip-path:polygon(0 0,100% 0,100% 100%,40px 100%,0 calc(100% - 40px))}
 .ph.c{left:18%;bottom:0;width:62%;height:34%;clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%)}
 .stamp{position:absolute;right:-6px;bottom:6%;width:min(178px,30vw);aspect-ratio:1;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;transform:rotate(-10deg);box-shadow:0 12px 30px -10px rgba(240,103,42,.7);z-index:3}
@@ -224,11 +228,7 @@ footer a:hover{color:#FFB08A}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Dan's L.A. Carpet Cleaning home">
-      <!-- temporary mark, swap for the final logo file -->
-      <svg class="brand-mark" viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="12" fill="#0F7F7A"/><path d="M8 33h9v-6h9v-6h9v-6" fill="none" stroke="#F0672A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="8" y="17" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#FFFDF8">L.A.</text></svg>
-      <span class="brand-txt">Dan's L.A.<small>Carpet Cleaning</small></span>
-    </a>
+    <a class="brand" href="index.html" aria-label="Dan's L.A. Carpet Cleaning home"><img src="images/logo.png" alt="Dan's L.A. Carpet Cleaning, Lethbridge, Alberta, est. 1989" width="260" height="68"></a>
     <nav class="main" id="nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="https://www.danslacarpetcleaning.com/about.html">About</a>
@@ -266,7 +266,7 @@ footer a:hover{color:#FFB08A}
     <div class="collage" aria-hidden="false">
       <div class="ph a"><img src="images/hero-steam-stairs.jpg" alt="Steam cleaning carpeted stairs in Lethbridge"></div>
       <div class="ph b"><img src="images/hero-sofa.jpg" alt="Furniture cleaning in Lethbridge"></div>
-      <div class="ph c"><img src="images/clean-carpet.jpg" alt="Freshly cleaned carpet in a bright living room"></div>
+      <div class="ph c"><img src="images/hero-stairs-clean.jpg" alt="Freshly cleaned carpeted staircase"></div>
       <div class="stamp">
         <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs><text font-family="Figtree,Arial" font-weight="700" font-size="15.5" letter-spacing="3.6" fill="#fff"><textPath href="#circ">LETHBRIDGE ALBERTA CARPET CLEANING · FAMILY RUN · </textPath></text></svg>
         <strong>1989<small>Established</small></strong>
@@ -299,27 +299,19 @@ footer a:hover{color:#FFB08A}
     <div class="ledger-grid">
       <ol class="rows" id="rows">
         <li class="on"><a href="#packages" data-img="images/clean-carpet.jpg" data-alt="Carpet and rug cleaning"><span class="n">01</span><span class="t">Carpet and rug cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#packages" data-img="images/hero-steam-stairs.jpg" data-alt="Steam cleaning"><span class="n">02</span><span class="t">Steam cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#packages" data-img="images/hero-sofa.jpg" data-alt="Furniture and sofa cleaning"><span class="n">03</span><span class="t">Furniture and sofa cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/service-steam-carpet.jpg" data-alt="Steam cleaning"><span class="n">02</span><span class="t">Steam cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/service-sofa.jpg" data-alt="Furniture and sofa cleaning"><span class="n">03</span><span class="t">Furniture and sofa cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
         <li><a href="#packages" data-img="images/mattress.jpg" data-alt="Mattress steam cleaning"><span class="n">04</span><span class="t">Mattress steam cleaning</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#packages" data-img="images/steam-room.jpg" data-alt="Pet odour removal"><span class="n">05</span><span class="t">Pet odour removal</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#contact" data-img="images/sofa-cleaning.jpg" data-alt="Auto interior detailing"><span class="n">06</span><span class="t">Auto interior detailing</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="https://www.danslacarpetcleaning.com/business_services.html" data-img="images/steam-room.jpg" data-alt="Office and commercial janitorial"><span class="n">07</span><span class="t">Office and commercial janitorial</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Exterior concrete sealants"><span class="n">08</span><span class="t">Exterior concrete sealants</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Minor building repairs"><span class="n">09</span><span class="t">Minor building repairs</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="https://www.danslacarpetcleaning.com/painting_service.html" data-img="images/furnished-room.jpg" data-alt="Interior painting"><span class="n">10</span><span class="t">Interior painting</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
-        <li><a href="#contact" data-img="images/furnished-room.jpg" data-alt="Lawn care"><span class="n">11</span><span class="t">Lawn care</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#packages" data-img="images/service-pet-odour.jpg" data-alt="Pet odour removal"><span class="n">05</span><span class="t">Pet odour removal</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/service-auto.jpg" data-alt="Auto interior detailing"><span class="n">06</span><span class="t">Auto interior detailing</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="https://www.danslacarpetcleaning.com/business_services.html" data-img="images/service-janitorial.jpg" data-alt="Office and commercial janitorial"><span class="n">07</span><span class="t">Office and commercial janitorial</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/service-concrete.jpg" data-alt="Exterior concrete sealants"><span class="n">08</span><span class="t">Exterior concrete sealants</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/service-repairs.jpg" data-alt="Minor building repairs"><span class="n">09</span><span class="t">Minor building repairs</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="https://www.danslacarpetcleaning.com/painting_service.html" data-img="images/service-painting.jpg" data-alt="Interior painting"><span class="n">10</span><span class="t">Interior painting</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
+        <li><a href="#contact" data-img="images/service-lawn.jpg" data-alt="Lawn care"><span class="n">11</span><span class="t">Lawn care</span><span class="ar"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></li>
       </ol>
       <aside class="preview">
-        <div class="preview-frame" id="pframe">
-          <img class="on" src="images/clean-carpet.jpg" alt="">
-          <img src="images/hero-steam-stairs.jpg" alt="">
-          <img src="images/hero-sofa.jpg" alt="">
-          <img src="images/mattress.jpg" alt="">
-          <img src="images/steam-room.jpg" alt="">
-          <img src="images/sofa-cleaning.jpg" alt="">
-          <img src="images/furnished-room.jpg" alt="">
-        </div>
+        <div class="preview-frame" id="pframe"></div>
         <p class="preview-note"><b>Protected after cleaning.</b> We apply Maxim Advanced carpet and furniture protectant. Stain guard and pet urine treatments are available for an extra charge.</p>
       </aside>
     </div>
@@ -395,7 +387,7 @@ footer a:hover{color:#FFB08A}
     </div>
   </div>
   <div class="about-band rv">
-    <img src="images/furnished-room.jpg" alt="Bright living room with a freshly cleaned sofa">
+    <img src="images/about-band.jpg" alt="Bright living room with a freshly cleaned rug and sofa">
   </div>
   <div class="wrap">
     <div class="about-card rv">
@@ -431,10 +423,7 @@ footer a:hover{color:#FFB08A}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="index.html">
-          <svg class="brand-mark" viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="12" fill="#F4EFE6"/><path d="M8 33h9v-6h9v-6h9v-6" fill="none" stroke="#F0672A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="8" y="17" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#0A4F4D">L.A.</text></svg>
-          <span class="brand-txt">Dan's L.A.<small>Carpet Cleaning</small></span>
-        </a>
+        <a class="brand plate" href="index.html"><img src="images/logo.png" alt="Dan's L.A. Carpet Cleaning" width="250" height="65"></a>
         <p>Family run carpet cleaning in Lethbridge, Alberta since 1989.</p>
       </div>
       <div>
@@ -478,7 +467,8 @@ footer a:hover{color:#FFB08A}
   nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
 
   // services ledger preview
-  var rows=document.querySelectorAll('#rows li'),imgs=document.querySelectorAll('#pframe img');
+  var rows=document.querySelectorAll('#rows li'),frame=document.getElementById('pframe'),imgs=[];
+  rows.forEach(function(li,i){var im=document.createElement('img');im.src=li.querySelector('a').getAttribute('data-img');im.alt='';im.loading=i?'lazy':'eager';if(!i)im.className='on';frame.appendChild(im);imgs.push(im)});
   function show(li){
     var src=li.querySelector('a').getAttribute('data-img');
     rows.forEach(function(r){r.classList.toggle('on',r===li)});
